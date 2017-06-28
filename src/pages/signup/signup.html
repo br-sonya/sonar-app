@@ -1,0 +1,209 @@
+<!--
+  Generated template for the Signup page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header style="background-color: #000000 !important ; color: #ffffff">
+
+  <ion-navbar>
+    <ion-title>Cadastre-se</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: #000000; color: #ffffff">
+  <div [hidden]="signupStep != 0">
+    <p>Preencha os campos solicitados pa,,ra realizar o cadastro.</p>
+  </div>
+
+
+  <div [hidden]="signupStep != 1">
+    <ion-row>
+      <ion-col>
+        <ion-item style="background-color: #000000; color: #ffffff">
+          <ion-label floating color="primary">NOME</ion-label>
+          <ion-input name="nome" type="email" spellcheck="false" [(ngModel)]="account.name" autocapitalize="off" #name="ngModel"
+                     required>
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+        <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+          <ion-icon color="light" name="mic"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+  <div [hidden]="signupStep != 2">
+    <ion-row>
+      <ion-col>
+    <ion-item style="background-color: #000000; color: #ffffff">
+      <ion-label floating color="primary">E-MAIL</ion-label>
+      <ion-input name="email" type="text" spellcheck="false" [(ngModel)]="account.email" autocapitalize="off" #email="ngModel"
+                 required>
+      </ion-input>
+    </ion-item>
+    </ion-col>
+    <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+      <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+        <ion-icon color="light" name="mic"></ion-icon>
+      </button>
+    </ion-col>
+    </ion-row>
+  </div>
+
+
+  <div [hidden]="signupStep != 3">
+    <ion-row>
+      <ion-col>
+        <ion-item style="background-color: #000000; color: #ffffff">
+          <ion-label floating color="primary">SENHA</ion-label>
+          <ion-input name="email" type="text" spellcheck="false" [(ngModel)]="account.password" autocapitalize="off" #email="ngModel"
+                     required>
+          </ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+        <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+          <ion-icon color="light" name="mic"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+    <div [hidden]="signupStep != 4">
+      <ion-item style="background-color: #000000; color: #ffffff">
+        <ion-label floating color="primary">ESTADO</ion-label>
+        <ion-select [(ngModel)]="address.stateId">
+        <ion-option value="2">SÃO PAULO</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <div [hidden]="signupStep != 5">
+      <ion-row>
+        <ion-col>
+          <ion-item style="background-color: #000000; color: #ffffff">
+            <ion-label floating color="primary">CIDADE</ion-label>
+            <ion-input name="email" type="text" spellcheck="false" [(ngModel)]="address.city" autocapitalize="off" #email="ngModel"
+                       required>
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+          <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+            <ion-icon color="light" name="mic"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+    <div [hidden]="signupStep != 6">
+      <ion-row>
+        <ion-col>
+          <ion-item style="background-color: #000000; color: #ffffff">
+            <ion-label floating color="primary">LOGRADOURO</ion-label>
+            <ion-input name="email" type="text" spellcheck="false" [(ngModel)]="address.location" autocapitalize="off" #email="ngModel"
+                       required>
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+          <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+            <ion-icon color="light" name="mic"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+    <div [hidden]="signupStep != 7">
+      <ion-row>
+        <ion-col>
+          <ion-item style="background-color: #000000; color: #ffffff">
+            <ion-label floating color="primary">CEP</ion-label>
+            <ion-input name="email" type="text" spellcheck="false" [(ngModel)]="address.cep" autocapitalize="off" #email="ngModel"
+                       required>
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+          <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+            <ion-icon color="light" name="mic"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+    <div [hidden]="signupStep != 8">
+      <ion-row>
+        <ion-col>
+          <ion-item style="background-color: #000000; color: #ffffff">
+            <ion-label floating color="primary">NÚMERO</ion-label>
+            <ion-input name="email" type="text" spellcheck="false" [(ngModel)]="address.number" autocapitalize="off" #email="ngModel"
+                       required>
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+          <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+            <ion-icon color="light" name="mic"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+    <div [hidden]="signupStep != 9">
+      <ion-row>
+        <ion-col>
+          <ion-item style="background-color: #000000; color: #ffffff">
+            <ion-label floating color="primary">COMPLEMENTO</ion-label>
+            <ion-input name="email" type="text" spellcheck="false" [(ngModel)]="address.complement" autocapitalize="off" #email="ngModel"
+                       required>
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+          <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+            <ion-icon color="light" name="mic"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+
+    <div [hidden]="signupStep != 10">
+      <ion-row>
+        <ion-col>
+          <ion-item style="background-color: #000000; color: #ffffff">
+            <ion-label floating color="primary">BAIRRO</ion-label>
+            <ion-input name="email" type="text" spellcheck="false" [(ngModel)]="address.neighborhood" autocapitalize="off" #email="ngModel"
+                       required>
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+          <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+            <ion-icon color="light" name="mic"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <ion-item style="background-color: #000000; color: #ffffff">
+      <button ion-button color="light" (click)="nextStep()" type="submit" block style="height: 60px; margin-top: 20px">PRÓXIMO</button>
+      <button ion-button color="light" [hidden]="signupStep < 2" (click)="prevStep()" type="submit" block style="height: 60px; margin-top: 20px">ANTERIOR</button>
+    </ion-item>
+  <!--<p danger [hidden]="isError">Este campo é obrigatório!</p>-->
+</ion-content>
+<ion-footer>
+
+</ion-footer>

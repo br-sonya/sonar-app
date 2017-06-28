@@ -1,0 +1,19 @@
+﻿<ion-header>
+  <ion-navbar color="black">
+    <ion-title>Procure o Endereço</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content color="black" style="background-color: #000000; color: #ffffff">
+  <ion-searchbar [(ngModel)]="autocomplete.query"
+                 [showCancelButton]="true"
+                 (ionInput)="updateSearch()"
+                 (ionCancel)="dismiss()"
+                 placeholder="Buscar endereço">
+  </ion-searchbar>
+  <ion-list text-wrap>
+    <ion-item text-wrap *ngFor="let item of autocompleteItems"
+              (click)="chooseItem(item)">
+      {{ item.description }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sonya</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding padding style="background-color: #000000; color: #ffffff; font-size: 14px;">
+  <form #loginForm="ngForm" novalidate>
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="onContinue()" color="light" block style="height: 60px; margin-top: 20px">ENTRAR SEM CADASTRO</button>
+      </ion-col>
+    </ion-row>
+
+    <ion-list no-lines>
+
+      <ion-row>
+        <ion-col>
+          <ion-item style="background-color: #000000; color: #ffffff">
+        <ion-label floating color="primary">EMAIL</ion-label>
+        <ion-input [(ngModel)]="login.email" name="email" type="email" #email="ngModel" spellcheck="false" autocapitalize="off"
+                   required>
+        </ion-input>
+      </ion-item>
+      </ion-col>
+      <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+        <button ion-button icon-only clear (click)="startListen(1)" style="vertical-align: baseline">
+          <ion-icon name="mic"></ion-icon>
+        </button>
+      </ion-col>
+      </ion-row>
+      <p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left>
+        Por favor digite um endereço de e-mail
+      </p>
+
+      <ion-row>
+        <ion-col>
+          <ion-item style="background-color: #000000; color: #ffffff">
+        <ion-label floating color="primary">SENHA</ion-label>
+        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        </ion-input>
+      </ion-item>
+        </ion-col>
+        <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+          <button ion-button icon-only clear (click)="startListen(2)" style="vertical-align: baseline">
+            <ion-icon name="mic"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <p ion-text [hidden]="password.valid || submitted == false" color="danger" padding-left>
+        Por favor digite uma senha
+      </p>
+    </ion-list>
+
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="onLogin(loginForm)" color="light" type="submit" block style="height: 60px; margin-top: 20px">ENTRAR</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button (click)="onSignup()" color="light" block style="height: 60px; margin-top: 20px">CADASTRE-SE NO SONYA</button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,75 @@
+﻿<!--
+  Generated template for the AddAddress page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Adicionar Endereço</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="font-size: 14px; background: #000000; color: #ffffff;">
+  <div [hidden]="addressEntriesHidden">
+    <p>Preencha os campos para adicionar um novo endereço.</p>
+  </div>
+
+    <ion-item style="background: #000000; color: #ffffff;">
+      <ion-label floating color="primary">ESTADO</ion-label>
+      <ion-select [(ngModel)]="address.stateId">
+        <ion-option value="25">SÃO PAULO</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item style="background: #000000; color: #ffffff;">
+      <ion-label floating color="primary">CIDADE</ion-label>
+      <ion-input name="cidade" type="text" spellcheck="false"  [(ngModel)]="address.city" autocapitalize="off" city="ngModel"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item style="background: #000000; color: #ffffff;">
+      <ion-label floating color="primary">LOGRADOURO</ion-label>
+      <ion-input name="logradouro" type="text" spellcheck="false"  [(ngModel)]="address.location" autocapitalize="off" location="ngModel"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item style="background: #000000; color: #ffffff;">
+      <ion-label floating color="primary">CEP</ion-label>
+      <ion-input name="cep" type="text" spellcheck="false"  [(ngModel)]="address.cep" autocapitalize="off" cep="ngModel"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item style="background: #000000; color: #ffffff;">
+      <ion-label floating color="primary">NÚMERO</ion-label>
+      <ion-input name="número" type="text" spellcheck="false"  [(ngModel)]="address.number" autocapitalize="off" number="ngModel"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item style="background: #000000; color: #ffffff;">
+      <ion-label floating color="primary">COMPLEMENTO</ion-label>
+      <ion-input name="complemento" type="text" spellcheck="false"  [(ngModel)]="address.complement" autocapitalize="off" complement="ngModel"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item style="background: #000000; color: #ffffff;">
+      <ion-label floating color="primary">BAIRRO</ion-label>
+      <ion-input name="bairro" type="text" spellcheck="false"  [(ngModel)]="address.neighborhood" autocapitalize="off" neighborhood="ngModel"
+                 required>
+      </ion-input>
+    </ion-item>
+    <ion-row responsive-sm>
+      <ion-col>
+        <button ion-button (click)="saveAddress()" type="submit" block style="height: 60px; margin-top: 20px; background: #ffffff; color: #000000;">SALVAR</button>
+      </ion-col>
+    </ion-row>
+  <!--<p danger [hidden]="isError">Este campo é obrigatório!</p>-->
+</ion-content>

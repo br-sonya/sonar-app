@@ -1,0 +1,86 @@
+{
+    "name": "ionic-hello-world",
+    "author": "Ionic Framework",
+    "homepage": "http://ionicframework.com/",
+    "private": true,
+    "scripts": {
+        "clean": "ionic-app-scripts clean",
+        "build": "ionic-app-scripts build",
+        "ionic:build": "ionic-app-scripts build",
+        "ionic:serve": "ionic-app-scripts serve"
+    },
+    "dependencies": {
+        "@angular/common": "2.4.8",
+        "@angular/compiler": "2.4.8",
+        "@angular/compiler-cli": "2.4.8",
+        "@angular/core": "2.4.8",
+        "@angular/forms": "2.4.8",
+        "@angular/http": "2.4.8",
+        "@angular/platform-browser": "2.4.8",
+        "@angular/platform-browser-dynamic": "2.4.8",
+        "@angular/platform-server": "2.4.8",
+        "@ionic-native/background-geolocation": "^3.10.3",
+        "@ionic-native/core": "^3.6.1",
+        "@ionic-native/geolocation": "^3.10.3",
+        "@ionic-native/speech-recognition": "^3.8.0",
+        "@ionic/storage": "^2.0.0",
+        "cordova-android": "^6.2.3",
+        "cordova-plugin-android-permissions": "^0.11.0",
+        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-device": "^1.1.4",
+        "cordova-plugin-mauron85-background-geolocation": "^2.2.0",
+        "cordova-plugin-speechrecognition": "^1.1.2",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-statusbar": "^2.2.1",
+        "cordova-plugin-tts": "^0.2.3",
+        "cordova-plugin-whitelist": "^1.3.1",
+        "cordova-sqlite-storage": "^2.0.4",
+        "cordova.plugins.diagnostic": "^3.6.4",
+        "ionic-angular": "2.2.0",
+        "ionic-native": "2.4.1",
+        "ionic-plugin-keyboard": "^2.2.1",
+        "ionicons": "3.0.0",
+        "rxjs": "5.0.1",
+        "sw-toolbox": "3.4.0",
+        "zone.js": "0.7.2"
+    },
+    "devDependencies": {
+        "@ionic/app-scripts": "1.1.4",
+        "@ionic/cli-plugin-cordova": "1.0.0-rc.2",
+        "@ionic/cli-plugin-ionic-angular": "1.0.0-rc.2",
+        "typescript": "2.0.9"
+    },
+    "cordovaPlugins": [
+        "cordova-plugin-whitelist",
+        "cordova-plugin-console",
+        "cordova-plugin-statusbar",
+        "cordova-plugin-device",
+        "ionic-plugin-keyboard",
+        "cordova-plugin-splashscreen"
+    ],
+    "cordovaPlatforms": [],
+    "description": "Sonar: An Ionic project",
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-console": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-mauron85-background-geolocation": {
+                "ALWAYS_USAGE_DESCRIPTION": "This app requires background tracking enabled",
+                "ACCOUNT_TYPE": "$PACKAGE_NAME.account",
+                "CONTENT_AUTHORITY": "$PACKAGE_NAME"
+            },
+            "cordova-plugin-speechrecognition": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-sqlite-storage": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-tts": {},
+            "cordova.plugins.diagnostic": {},
+            "cordova-plugin-android-permissions": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
+}

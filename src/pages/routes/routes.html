@@ -1,0 +1,47 @@
+﻿<!--
+  Generated template for the Routes page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar style="background-color: #000000; color: #ffffff">
+    <ion-title>Nova Rota</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: #000000; color: #ffffff; font-size: 14px;">
+  <div id="map" style="height: 0;"></div>
+  <ion-list>
+    <ion-row>
+      <ion-col>
+    <ion-item style="background: #000000; color: #ffffff">
+      <ion-input type="text" placeholder="Buscar endereço"
+                 (focus)="showModal()"
+                 [(ngModel)]="address.place">
+      </ion-input>
+    </ion-item>
+      </ion-col>
+      <ion-col col-1 style="margin-top: 20px; margin-right: 20px">
+        <button ion-button icon-only clear (click)="startListen()" style="vertical-align: baseline">
+          <ion-icon color="light" name="mic"></ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-item *ngIf="address.set==true">
+      <ion-icon name="pin" item-left></ion-icon>
+      <h3>Endereço</h3>
+      <p>{{ placedetails.address }}</p>
+      <h3>Rua</h3>
+      <p>{{ placedetails.components.route.long }}</p>
+      <h3>Número</h3>
+      <p>{{ placedetails.components.street_number.long }}</p>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button color="light" (click)="StartNavigation()" ng-show="address.place == null && (atualLat != null && atualLat != 0)" block style="height: 60px; margin-top: 20px">NOVA ROTA</button>
+
+</ion-content>
